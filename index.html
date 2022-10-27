@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backpack Traveler</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Use Lora, Montserrat, Inspiration Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inspiration&family=Lora&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./style/home.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <template id="destinationTemplateItem">
+      <li class="col-12 col-md-6 col-xl-3 mb-4">
+        <article class="travel-item">
+          <img src="" alt="img-travel" class="w-100 mb-4" data-id="thumbnail" />
+          <img src="" alt="maptravel" class="travel-item__img-map" data-id="map" />
+          <div class="travel-item__content text-center">
+            <h1 data-id="national" class="text-capitalize mt-3 mb-3"></h1>
+            <div class="text-uppercase mb-4 mt-2">
+              <a href="#" data-id="categoriesTag"></a>
+              <a href="#" data-id="categoriesTag"></a>
+              <a href="#" data-id="categoriesTag"></a>
+            </div>
+            <button>EXPLORE</button>
+          </div>
+        </article>
+      </li>
+    </template>
+
+    <!-- Navigation -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
+              alt="Logo-backpack-travel"
+              width="200"
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__menu">
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3 nav__menu-item-travel">
+                <a class="text-uppercase nav-link" href="#">Travel</a>
+                <i class="fa-solid fa-star"></i>
+              </li>
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="text-uppercase nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                  <li><a class="dropdown-item" href="#">About Me</a></li>
+                  <li><a class="dropdown-item" href="#">Destination Map</a></li>
+                  <li><a class="dropdown-item" href="#">FAQ Page</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="d-flex nav__icon">
+              <li class="">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Carousel -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./image/destination-brazill-single-img5.jpg"
+              class="d-block w-100"
+              alt="img-carousel"
+            />
+            <div class="carousel-caption d-flex justify-content-center align-items-center">
+              <h2>Endless Beaches</h2>
+              <p>Crystal Waters</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./image/h2-destination-1-img-1.jpg"
+              class="d-block w-100"
+              alt="img-carousel"
+            />
+            <div class="carousel-caption d-flex justify-content-center align-items-center">
+              <h2>Around The World</h2>
+              <p>in 3 months</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./image/india-destination-img-3.jpg"
+              class="d-block w-100"
+              alt="img-carousel"
+            />
+            <div class="carousel-caption d-flex justify-content-center align-items-center">
+              <h2>Seaside Adventure</h2>
+              <p>Go Exploring</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Contain -->
+      <div class="content__wrap">
+        <section class="col-12 detail">
+          <h1 class="text-uppercase mb-2 mb-xl-4">Best Places To Visit?</h1>
+          <p>
+            Donec varius faucibus sem. Quisque non egestas lorem, eget blandit massa. Pellentesque
+            ultricies, lorem quis bibendum auctor, nisi elit consequat ipsum
+          </p>
+        </section>
+
+        <ul class="travel-list row" id="destinationList">
+          <!-- <li class="col-12 col-md-6 col-xl-3 mb-3">
+            <article class="travel-item">
+              <img src="./image/spain-single-2-2.jpg" alt="img-travel" class="w-100 mb-4" />
+              <img src="./image/spain-img.png" alt="maptravel" class="travel-item__img-map" />
+              <div class="travel-item__content text-center">
+                <h1>Spain</h1>
+                <div class="text-uppercase mb-4 mt-2">
+                  <a href="#">fishing/overnight</a>
+                </div>
+                <button>EXPLORE</button>
+              </div>
+            </article>
+          </li> -->
+        </ul>
+        <div class="row">
+          <button class="travel-btn__more" id="loadMoreBtn">LOAD MORE</button>
+        </div>
+        <div class="loader"></div>
+
+        <section class="row info">
+          <div class="col-12 text-center info__img">
+            <div class="info__img--wrap-title">
+              <img src="./image/mellisa-slide1-graphic4.png" alt="graphic" class="info__graphic4" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="info__img--wrap-dog">
+                <img
+                  src="./image/mellisa-slide1-graphic1.png"
+                  alt="graphic"
+                  class="info__graphic1"
+                />
+              </div>
+              <img src="./image/mellisa-slide1-graphic3.png" alt="graphic" class="info__graphic3" />
+              <div class="info__img--wrap-avatar">
+                <img
+                  src="./image/mellisa-slide1-graphic2.png"
+                  alt="graphic"
+                  class="info__graphic2"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="info__description col-12">
+            <h1 class="text-uppercase mb-3">Hi!I’m Melissa :)<br />Let’s go travel</h1>
+            <p>
+              In id cursus diam, vel faucibus metus. Mauris felis erat, rhoncus a sem id, consequat
+              consequat tellus.
+              <span style="color: #f2756a"> Nam vitae euismod orci</span>
+              , ac vehicula quam. Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc
+              aecenas semper au auris felis erat, rhoncus a sem id, consequat consequat tellus.
+            </p>
+            <br />
+            <p>
+              Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc aecenas semper au auris
+              felis erat, rhoncus a sem id, consequat consequat tellus.
+            </p>
+            <h2 class="mt-4">Melissa Johanson</h2>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="footer-description">
+        <p>© 2018 Qode Interactive, All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Button back to top -->
+    <button class="btn--back-to-top" id="backToTop">Top</button>
+
+    <!-- Modal -->
+
+    <!-- Bootstrap Script  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Scripts should be placed here to prevent blocking render UI -->
+    <script type="module" src="./js/home.js"></script>
+  </body>
+</html>

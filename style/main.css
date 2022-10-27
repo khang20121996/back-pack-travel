@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+/* Make footer always at bottom of our screen */
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+  
+body > main {
+    flex: 1 1 auto;
+}
+
+:root {
+    --lora-font: 'Lora', serif;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --inspiration-font: 'Inspiration', cursive;
+    --primary-color: #cf2e2e;
+    --text-color: #6c6c6c;
+    --title-color: #000;
+    --border-color: #f1ecec;
+    --margin-section: 6rem
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+  
+  /* Reset ul, a style */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--lora-font);
+}
+
+.nav .nav__link {
+    text-decoration:  none;
+}
+
+button {
+    letter-spacing: 5px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    padding: 14px 64px;
+    margin-bottom: 3rem;
+    transition: all 0.4s;
+}
