@@ -19,6 +19,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
 
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+
     <!-- Use Lora, Montserrat, Inspiration Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inspiration&family=Lora&family=Montserrat:wght@300;400&display=swap"
@@ -26,8 +28,8 @@
     />
 
     <!-- Internal CSS -->
-    <link rel="stylesheet" href="./style/home.css" />
     <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/home.css" />
   </head>
   <body>
     <template id="destinationTemplateItem">
@@ -210,9 +212,99 @@
       </div>
 
       <!-- Contain -->
+      <section class="blog">
+        <div class="row">
+          <div class="col-12 col-xl-4 mb-4">
+            <div class="blog__description">
+              <h1 class="title mb-2">THE TOP 4 DAY TRIPS</h1>
+              <p class="text-content">
+                We are Backpack Traveler, Melissa and Johnatan (that’s us!)
+              </p>
+              <br />
+              <p class="text-content description">
+                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
+                quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Ad enim iracundia nam,
+                alii at usu. Per eu soluta, sed non mauris vitae erat consequat auctor eu in elit.
+              </p>
+              <ul class="d-flex mt-4 mb-4">
+                <li>
+                  <a href="https://www.facebook.com/" class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" class="me-4 ms-4" class="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.pinterest.com/" class="pinterest">
+                    <i class="fa-brands fa-pinterest"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-8 row blog__list">
+            <div class="col-12 col-md-6 mb-4">
+              <a href="#">
+                <div class="mb-3 blog__list-img">
+                  <img
+                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/h5-post-5.jpg"
+                    alt="blog-image"
+                    class="w-100"
+                  />
+                </div>
+
+                <h1 class="mb-3 title-2 text-uppercase">a WEEKEND GUIDE TO AUSTRIA</h1>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <a href="#">
+                <div class="mb-3 blog__list-img">
+                  <img
+                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/single-post-7.jpg"
+                    alt="blog-image"
+                    class="w-100"
+                  />
+                </div>
+                <h1 class="mb-3 title-2 text-uppercase">THE TOP CLIMBING TOURS</h1>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <a href="#">
+                <div class="mb-3 blog__list-img">
+                  <img
+                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/h5-post-4.jpg"
+                    alt="blog-image"
+                    class="w-100"
+                  />
+                </div>
+                <h1 class="mb-3 title-2 text-uppercase">THE COMPLETE TRAVEL GUIDE 😍</h1>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <a href="#">
+                <div class="mb-3 blog__list-img">
+                  <img
+                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/blog-post-h2-4.jpg"
+                    alt="blog-image"
+                    class="w-100"
+                  />
+                </div>
+                <h1 class="mb-3 title-2 text-uppercase">A GUIDE TO BEST MARKETS</h1>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="content__wrap">
         <section class="col-12 detail">
-          <h1 class="text-uppercase mb-2 mb-xl-4">Best Places To Visit?</h1>
+          <h1 class="title text-uppercase mb-2 mb-xl-4">Best Places To Visit?</h1>
           <p>
             Donec varius faucibus sem. Quisque non egestas lorem, eget blandit massa. Pellentesque
             ultricies, lorem quis bibendum auctor, nisi elit consequat ipsum
@@ -238,50 +330,52 @@
           <button class="travel-btn__more" id="loadMoreBtn">LOAD MORE</button>
         </div>
         <!-- <div class="loader"></div> -->
-
-        <section class="row info">
-          <div class="col-12 text-center info__img">
-            <div class="info__img--wrap-title">
-              <img src="./image/mellisa-slide1-graphic4.png" alt="graphic" class="info__graphic4" />
-            </div>
-            <div class="d-flex justify-content-center">
-              <div class="info__img--wrap-dog">
-                <img
-                  src="./image/mellisa-slide1-graphic1.png"
-                  alt="graphic"
-                  class="info__graphic1"
-                />
-              </div>
-              <img src="./image/mellisa-slide1-graphic3.png" alt="graphic" class="info__graphic3" />
-              <div class="info__img--wrap-avatar">
-                <img
-                  src="./image/mellisa-slide1-graphic2.png"
-                  alt="graphic"
-                  class="info__graphic2"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="info__description col-12">
-            <h1 class="text-uppercase mb-3">Hi!I’m Melissa :)<br />Let’s go travel</h1>
-            <p>
-              In id cursus diam, vel faucibus metus. Mauris felis erat, rhoncus a sem id, consequat
-              consequat tellus.
-              <span style="color: #f2756a"> Nam vitae euismod orci</span>
-              , ac vehicula quam. Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc
-              aecenas semper au auris felis erat, rhoncus a sem id, consequat consequat tellus.
-            </p>
-            <br />
-            <p>
-              Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc aecenas semper au auris
-              felis erat, rhoncus a sem id, consequat consequat tellus.
-            </p>
-            <h2 class="mt-4">Melissa Johanson</h2>
-          </div>
-        </section>
       </div>
+
+      <section class="row info">
+        <div class="col-12 text-center info__img">
+          <div class="info__img--wrap-title">
+            <img src="./image/mellisa-slide1-graphic4.png" alt="graphic" class="info__graphic4" />
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="info__img--wrap-dog">
+              <img src="./image/mellisa-slide1-graphic1.png" alt="graphic" class="info__graphic1" />
+            </div>
+            <img src="./image/mellisa-slide1-graphic3.png" alt="graphic" class="info__graphic3" />
+            <div class="info__img--wrap-avatar">
+              <img src="./image/mellisa-slide1-graphic2.png" alt="graphic" class="info__graphic2" />
+            </div>
+          </div>
+        </div>
+
+        <div class="info__description col-12">
+          <h1 class="text-uppercase mb-3">Hi!I’m Melissa :)<br />Let’s go travel</h1>
+          <p class="description">
+            In id cursus diam, vel faucibus metus. Mauris felis erat, rhoncus a sem id, consequat
+            consequat tellus.
+            <span style="color: #f2756a"> Nam vitae euismod orci</span>
+            , ac vehicula quam. Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc
+            aecenas semper au auris felis erat, rhoncus a sem id, consequat consequat tellus.
+          </p>
+          <br />
+          <p class="description">
+            Vestibulum quis dui et turpis scelerisque lacinia et. Et nunc aecenas semper au auris
+            felis erat, rhoncus a sem id, consequat consequat tellus.
+          </p>
+          <h2 class="mt-4">Melissa Johanson</h2>
+        </div>
+      </section>
     </main>
+
+    <div class="owl-carousel owl-theme">
+      <div>Your Content</div>
+      <div>Your Content</div>
+      <div>Your Content</div>
+      <div>Your Content</div>
+      <div>Your Content</div>
+      <div>Your Content</div>
+      <div>Your Content</div>
+    </div>
 
     <footer class="container-fluid">
       <div class="footer-description">
@@ -302,6 +396,9 @@
     ></script>
 
     <!-- Scripts should be placed here to prevent blocking render UI -->
+    <script type="module" src="./js/utils/carousel.js"></script>
     <script type="module" src="./js/home.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
   </body>
 </html>

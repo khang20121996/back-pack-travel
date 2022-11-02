@@ -2,7 +2,27 @@
 font-family: 'Lora', serif;
 font-family: 'Montserrat', sans-serif;
 */
+/*  */
+.description {
+  font-family: var(--lora-font);
+  color: var(--text-color);
+  font-size: 16px;
+  width: 90%;
+  line-height: 28px;
+}
 
+.title {
+  font-family: var(--montserrat-font);
+  letter-spacing: 8px;
+  color: var(--title-color);
+}
+
+.title-2 {
+  font-family: var(--montserrat-font);
+  letter-spacing: 3px;
+  color: var(--title-color);
+  font-size: 1rem;
+}
 /* Navigation */
 .navbar-brand {
   margin-right: 200px;
@@ -55,14 +75,14 @@ font-family: 'Montserrat', sans-serif;
 
 /* Carousel */
 .carousel-item img {
-  height: 540px;
+  height: 600px;
 }
 
 .carousel-item .carousel-caption {
   background-image: url('../image/h6-slider-graphic-1.png');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: 8rem;
+  margin-bottom: 14rem;
 }
 
 .carousel-item .carousel-caption h2 {
@@ -80,9 +100,14 @@ font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
+.carousel-indicators {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .carousel-item .carousel-caption {
-    margin-bottom: 13rem;
+    margin-bottom: 10rem;
+    margin-left: 3rem;
     padding: 0;
   }
 
@@ -94,11 +119,16 @@ font-family: 'Montserrat', sans-serif;
   .carousel-item .carousel-caption p {
     font-size: 1rem;
   }
+
+  .carousel-item img {
+    height: 440px;
+  }
 }
 
 @media (max-width: 576px) {
   .carousel-item .carousel-caption {
-    margin-bottom: 9rem;
+    margin-bottom: 6rem;
+    margin-left: 0;
     padding: 0;
   }
 
@@ -111,11 +141,46 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .carousel-item img {
-    height: 400px;
+    height: 260px;
+  }
+
+  .carousel-control-prev {
+    display: none;
+  }
+
+  .carousel-control-next {
+    display: none;
   }
 }
 
 /* Content */
+/* Blog */
+.blog {
+  margin-top: 6rem;
+}
+
+.blog__description ul li i {
+  font-size: 1.4rem;
+}
+
+.blog__list-img {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.blog__list-img img {
+  transition: all 0.6s ease;
+  /* opacity: 1; */
+  filter: brightness(100%);
+}
+
+.blog__list-img img:hover {
+  transform: scale(1.1);
+  /* opacity: 0.8; */
+  filter: brightness(80%);
+}
+
+/*  */
 .content__wrap {
   margin-top: 4rem;
   background-image: url('../image/Destination-home9-3.png');
@@ -127,12 +192,6 @@ font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.content__wrap .detail h1 {
-  font-family: var(--montserrat-font);
-  letter-spacing: 8px;
-  color: var(--title-color);
-}
-
 .content__wrap .detail p {
   font-family: var(--lora-font);
   color: var(--text-color);
@@ -142,6 +201,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 /* Travel List */
+
 .travel-list {
   margin-top: 4rem;
 }
@@ -152,6 +212,12 @@ font-family: 'Montserrat', sans-serif;
 
 .travel-item [data-id='thumbnail'] {
   height: 220px;
+}
+
+@media (max-width: 992px) {
+  .travel-item [data-id='thumbnail'] {
+    height: 280px;
+  }
 }
 
 .travel-item__img-map {
@@ -356,14 +422,6 @@ font-family: 'Montserrat', sans-serif;
   font-family: var(--montserrat-font);
   letter-spacing: 6px;
   color: var(--title-color);
-}
-
-.info__description p {
-  font-family: var(--lora-font);
-  color: var(--text-color);
-  font-size: 16px;
-  width: 90%;
-  line-height: 28px;
 }
 
 .info__description h2 {

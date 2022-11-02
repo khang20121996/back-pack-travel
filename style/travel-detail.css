@@ -116,12 +116,6 @@
   color: var(--title-color);
 }
 
-.text-content {
-  font-family: var(--lora-font);
-  font-size: 1.2rem;
-  color: var(--text-color);
-  line-height: 2rem;
-}
 /* banner */
 .banner img {
   width: 100%;

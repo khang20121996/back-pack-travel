@@ -70,3 +70,22 @@ button {
   margin-bottom: 3rem;
   transition: all 0.4s;
 }
+
+.text-content {
+  font-family: var(--lora-font);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 2rem;
+}
+
+li .facebook {
+  color: #3b5998;
+}
+
+li .twitter {
+  color: #55acee;
+}
+
+li .pinterest {
+  color: #cb2027;
+}
