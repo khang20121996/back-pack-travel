@@ -126,14 +126,14 @@
 
     <main class="container">
       <div class="banner col-12">
-        <img src="./image/detail/destination-india.jpg" alt="banner-detail" />
+        <img src="" alt="banner-detail" data-id="banner" />
       </div>
 
       <div class="content-wrap row">
         <div class="content col-12 col-xl-9">
-          <section class="thing-to-see">
-            <h1 class="thing-to-see__nation mb-3">India</h1>
-            <h1 class="thing-to-see__title title-1">WHAT CAN I EXPECT FROM INDIA?</h1>
+          <section class="thing-to-see" id="thingsToSee">
+            <h1 class="thing-to-see__nation mb-3 text-capitalize" data-id="nation"></h1>
+            <h1 class="thing-to-see__title title-1 text-uppercase" data-id="title-1"></h1>
             <p class="text-content">
               Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
               quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.Duis
@@ -149,105 +149,74 @@
               tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat
               auctor eu in elit.
             </p>
-            <h3 class="title-2">THINGS TO SEE AND DO IN INDIA</h3>
-            <ul class="thing-to-see__list row">
-              <div class="col-xl-3">
-                <li class="text-content">Proin gravida nibh</li>
-                <li class="text-content">Sollicitudin, lorem quis auctor</li>
-                <li class="text-content">Vel velit auctor aliquet</li>
-              </div>
-              <div class="col-xl-3">
-                <li class="text-content">Proin gravida nibh</li>
-                <li class="text-content">Sollicitudin, lorem quis auctor</li>
-                <li class="text-content">Vel velit auctor aliquet</li>
-              </div>
-              <div class="col-xl-3">
-                <li class="text-content">Proin gravida nibh</li>
-                <li class="text-content">Sollicitudin, lorem quis auctor</li>
-              </div>
-            </ul>
+            <h3 class="title-2 text-uppercase" data-id="title-2">THINGS TO SEE AND DO IN INDIA</h3>
+            <template data-id="thingsToSeeList">
+              <li class="text-content flex-grow-1"></li>
+            </template>
+            <ul class="thing-to-see__list d-flex flex-wrap" id="thingsToSeeList"></ul>
             <div class="thing-to-see__img row">
               <div class="col-md-6 text-center mb-4">
-                <img src="./image/detail/india-destination-img-3.jpg" alt="india-img" />
+                <img src="" alt="india-img" data-id="image-1" />
                 <figcaption>“The Professional Hobo”</figcaption>
               </div>
               <div class="col-md-6 text-center mb-4">
-                <img src="./image/detail/india-destination-img-4.jpg" alt="india-img" />
+                <img src="" alt="india-img" data-id="image-2" />
                 <figcaption>“Never Ending Footsteps”</figcaption>
               </div>
             </div>
           </section>
 
-          <section class="typical-costs">
+          <section class="typical-costs" id="typicalCosts">
             <h1 class="title-1">TYPICAL COSTS WHEN TRAVELLING</h1>
             <p class="text-content">
-              <span class="fw-bolder">Accommodation: </span>Quo at mollis tritani molestie, munere
-              vivendum sit ei, nec congue bonorum an. In quidam iriure alienum nam, in scripta
-              probatus usu. Aperiam tractatos ex his, ex usu facete accumsan, duo platonem
-              efficiantur intellegebat ut. Accusata scripserit persequeris pri eu, accusam
-              argumentum disputationi an his. Nulla erant urbanitas sed ne, mei velit laudem id,
-              nonumy eligendi pri ei. Eu mel everti ocurreret, nemore quodsi referrentur ius ad.
+              <span class="fw-bolder">Accommodation: </span>
+              <span data-id="accommodation"></span>
             </p>
             <br />
             <p class="text-content">
-              <span class="fw-bolder">Food: </span>Quo at mollis tritani molestie, munere vivendum
-              sit ei, nec congue bonorum an. In quidam iriure alienum nam, in scripta probatus usu.
-              Aperiam tractatos ex his, ex usu facete accumsan, duo platonem efficiantur
-              intellegebat ut. Accusata scripserit persequeris pri eu, accusam argumentum
-              disputationi an his. Nulla erant urbanitas sed ne, mei velit laudem id, nonumy
-              eligendi pri ei. Eu mel everti ocurreret, nemore quodsi referrentur ius ad.
+              <span class="fw-bolder">Food: </span>
+              <span data-id="food"></span>
             </p>
             <br />
             <p class="text-content">
-              <span class="fw-bolder">Transportation: </span>Quo at mollis tritani molestie, munere
-              vivendum sit ei, nec congue bonorum an. In quidam iriure alienum nam, in scripta
-              probatus usu. Aperiam tractatos ex his, ex usu facete accumsan, duo platonem
-              efficiantur intellegebat ut. Accusata scripserit persequeris pri eu, accusam
-              argumentum disputationi an his. Nulla erant urbanitas sed ne, mei velit laudem id,
-              nonumy eligendi pri ei. Eu mel everti ocurreret, nemore quodsi referrentur ius ad.
+              <span class="fw-bolder">Transportation: </span>
+              <span data-id="transportation"></span>
             </p>
             <br />
-            <img src="./image/detail/destination-india-img-2.png" alt="india-img" />
+            <img src="" alt="india-img" data-id="typicalCostsImg" />
             <div class="typical-cost__budget-tip">
               <p class="text-content">
-                <span class="fw-bolder">Suggested daily budget:</span> 50-60 EUR / 52-62 USD (Note:
-                This is a suggested budget assuming you’re staying in a hostel, eating out a little,
-                cooking most of your meals, and using local transportation. Using the budget tips
-                below, you can always lower this number. However, if you stay in fancier
-                accommodation or eat out more often, expect this to be higher!)
+                <span class="fw-bolder">Suggested daily budget:</span>
+                <span data-id="suggestedDailyBudget"></span>
               </p>
             </div>
             <h2 class="title-2">MONEY SAVING TIPS</h2>
-            <ul class="typical-costs__money-saving-tips row">
+            <ul class="typical-costs__money-saving-tips row" id="budgetTips">
               <li class="col-12 col-md-6">
                 <p class="text-content">
-                  <span class="fw-bolder">Get the menu of the day -</span> Accusata vulputate pri
-                  an, mel no vivendo deleniti, aliquid probatus elaboraret ut quo. Veniam facete
-                  intellegebat et mei, cetero luptatum definiebas at nec. Nisl viris.
+                  <span class="fw-bolder">Get the menu of the day -</span>
+                  <span class="text-content" data-id="getTheMenu"></span>
                 </p>
               </li>
 
               <li class="col-12 col-md-6">
                 <p class="text-content">
-                  <span class="fw-bolder">Get city passes -</span> Cetero luptatum definiebas at
-                  nec. Nisl viris inimicus no eam. Audire platonem id mea, prompta volumus mandamus
-                  cu. Pri in wisi ancillae, nec nisl numquam eu dicunt bonorum..
+                  <span class="fw-bolder">Get city passes -</span>
+                  <span class="text-content" data-id="rideWithUber"></span>
                 </p>
               </li>
 
               <li class="col-12 col-md-6">
                 <p class="text-content">
-                  <span class="fw-bolder">Ride with Uber-</span> Quo at mollis tritani molestie,
-                  munere vivendum sit ei, nec congue bonorum an. In quidam iriure alienum nam, in
-                  scripta probatus usu. Aperiam ex his, ex usu.
+                  <span class="fw-bolder">Ride with Uber -</span>
+                  <span class="text-content" data-id="getCityPasses"></span>
                 </p>
               </li>
 
               <li class="col-12 col-md-6">
                 <p class="text-content">
-                  <span class="fw-bolder">Couchsurf -</span> Scripta probatus usu. Aperiam tractatos
-                  ex his, ex usu facete accumsan, duo platonem efficiantur intellegebat ut. Accusata
-                  scripserit pri eu, accusam no nullam.
+                  <span class="fw-bolder">Couchsurf -</span>
+                  <span class="text-content" data-id="couchsurf"></span>
                 </p>
               </li>
             </ul>
@@ -287,9 +256,9 @@
             </ul>
           </section>
 
-          <section class="related-articles">
-            <h1 class="title-1">WHAT CAN I EXPECT FROM LONDON?</h1>
-            <p class="text-content">
+          <section class="related-articles" id="relatedArticles">
+            <h1 class="title-1 text-uppercase" data-id="title-1"></h1>
+            <p class="text-content" data-id="description1">
               Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
               quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.Duis
               sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
@@ -335,7 +304,7 @@
                 </a>
               </li>
             </ul>
-            <p class="text-content">
+            <p class="text-content" data-id="description1">
               Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
               quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.Duis
               sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
@@ -349,19 +318,21 @@
             </p>
           </section>
 
-          <section class="content-footer">
+          <section class="content-footer" id="contentFooter">
             <div class="content-footer__tag text-content d-flex">
               <div class="me-4">
                 <i class="fa-solid fa-award me-1"></i>
-                <a href="#">Beaches</a>
-                <a href="#">Flights</a>
-                <a href="#">Guides</a>
+                <a href="#" data-id="category0" class="text-capitalize fst-italic"></a>
+                <a href="#" data-id="category1" class="text-capitalize fst-italic"></a>
+                <a href="#" data-id="category2" class="text-capitalize fst-italic"></a>
               </div>
 
-              <a href="#" class="me-4">
-                <i class="fa-regular fa-heart"></i>
-                <span>2</span>
-              </a>
+              <div href="#" class="me-2 d-flex align-items-center">
+                <i class="fa-regular fa-heart" data-id="heart"></i>
+                <i class="fa-solid fa-heart" data-id="heartAble"></i>
+              </div>
+              <span data-id="amountHeart" class="me-4">2</span>
+
               <a href="#">
                 <i class="fa-regular fa-comment"></i>
                 <span>0</span>
@@ -370,79 +341,100 @@
 
             <div class="line"></div>
 
-            <div class="content-footer__author d-flex justify-content-between">
+            <div class="content-footer__author d-md-flex justify-content-between">
               <a class="title-2">MELISSA JOHANSON</a>
-              <ul class="content-footer__author--list-icon d-flex">
+              <ul class="content-footer__author--list-icon d-flex mb-2 mt-2 mb-md-0 mt-md-0">
                 <li>
-                  <a href="#" class="facebook">
+                  <a href="https://www.facebook.com/" class="facebook">
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="me-4 ms-4" class="twitter">
+                  <a href="https://twitter.com/" class="me-4 ms-4" class="twitter">
                     <i class="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="pinterest">
+                  <a href="https://www.pinterest.com/" class="pinterest">
                     <i class="fa-brands fa-pinterest"></i>
                   </a>
                 </li>
               </ul>
-              <div class="content-footer__author--times text-content">September 6, 2018</div>
+              <div class="content-footer__author--times text-content" data-id="date"></div>
             </div>
 
             <div class="line"></div>
 
-            <div class="content-footer__pagination d-flex justify-content-between">
-              <a href="#" class="title-2">PREVIOUS DESTINATION</a>
-              <a href="#" class="title-2">NEXT DESTINATION</a>
+            <div
+              class="content-footer__pagination d-flex justify-content-between"
+              id="contentFooterPagination"
+            >
+              <div data-id="previous">
+                <img src="" alt="" data-id="preImage" />
+                <a href="#" class="title-2">PREVIOUS DESTINATION</a>
+              </div>
+              <div data-id="next">
+                <a href="#" class="title-2">NEXT DESTINATION</a>
+                <img src="" alt="" data-id="nextImage" />
+              </div>
             </div>
           </section>
 
           <section class="comments">
             <h1 class="title-2">COMMENTS:</h1>
-            <ul class="comment-list">
-              <li class="comment-item row">
+            <template id="commentItemTemp">
+              <li class="comment-item row mb-2">
                 <div class="col-12 col-md-2">
                   <img
                     src="./image/detail/f6b3ee0bdcdaa74a1ae4a786274c0b40.png"
                     alt="avatar"
                     class="w-xl-100"
+                    data-id="avatar"
                   />
                 </div>
                 <div class="col-12 col-md-10">
                   <div class="d-md-flex align-items-center mb-3">
-                    <h3 class="me-4 mb-md-0 mb-3">Khang Nguyen</h3>
-                    <span class="mt-1">October 20, 2022</span>
+                    <h3 class="me-4 mb-md-0 mb-3" data-id="author"></h3>
+                    <span class="mt-1" data-id="date"></span>
                   </div>
 
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                  <p data-id="content"></p>
+                  <button data-id="remove" id="remove">remove</button>
                 </div>
               </li>
-            </ul>
+            </template>
+            <ul class="comment-list" id="commentList"></ul>
             <h1 class="title-2">POST A COMMENTS:</h1>
-            <form class="comment-post">
-              <textarea
-                placeholder="Your comment..."
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                class="w-100 mb-2"
-              ></textarea>
+            <form class="was-validated comment-post" id="commentsForm" novalidate>
+              <div class="mb-4">
+                <textarea
+                  placeholder="Your comment..."
+                  id=""
+                  cols="30"
+                  rows="10"
+                  name="content"
+                  class="w-100"
+                ></textarea>
+                <div class="invalid-feedback">Please enter a valid name!</div>
+              </div>
+
               <div class="row mb-3">
                 <div class="col-md-4 col-12">
-                  <input placeholder="Your Name" type="text" class="w-100" />
+                  <input placeholder="Your Name" type="text" class="w-100" name="author" />
+                  <div class="mt-2 invalid-feedback">Please enter a valid name!</div>
                 </div>
+
                 <div class="col-md-4 col-12">
-                  <input placeholder="Your Name" type="text" class="w-100" />
+                  <input placeholder="Your Email" type="text" class="w-100" name="email" />
+                  <div class="mt-2 invalid-feedback">Please enter a valid email!</div>
                 </div>
+
                 <div class="col-md-4 col-12">
-                  <input placeholder="Your Name" type="text" class="w-100" />
+                  <input placeholder="Your Website" type="text" class="w-100" name="website" />
+                  <div class="mt-2 invalid-feedback">Please enter a valid website!</div>
                 </div>
               </div>
-              <button>SUBMIT</button>
+              <button name="submit" type="submit" class="mt-4">SUBMIT</button>
             </form>
           </section>
         </div>
@@ -489,13 +481,14 @@
         </aside>
       </div>
     </main>
+
     <footer class="container-fluid">
       <div class="footer-description">
         <p>© 2018 Qode Interactive, All Rights Reserved</p>
       </div>
     </footer>
 
-    <button class="btn--back-to-top">Top</button>
+    <button class="btn--back-to-top" id="backToTop">Top</button>
 
     <!-- Bootstrap Script  -->
     <script
@@ -503,5 +496,8 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Scripts should be placed here to prevent blocking render UI -->
+    <script type="module" src="js/destination-detail.js"></script>
   </body>
 </html>

@@ -150,6 +150,10 @@ font-family: 'Montserrat', sans-serif;
   border: 1px solid rgb(238, 236, 236);
 }
 
+.travel-item [data-id='thumbnail'] {
+  height: 220px;
+}
+
 .travel-item__img-map {
   width: 50%;
   margin: auto;

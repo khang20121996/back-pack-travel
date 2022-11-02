@@ -1,7 +1,7 @@
 export function initBackToTopButton(backToTopBtn) {
   if (!backToTopBtn) return;
 
-  document.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       backToTopBtn.style.display = 'block';
     } else {

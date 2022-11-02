@@ -21,7 +21,13 @@ function createDestinationElement(destination) {
       i === categoryTagList.length - 1 ? `${categoryTagList[i]}` : `${categoryTagList[i]}/`;
   }
 
-  // attach event
+  // attach event for explore button
+  const exploreButton = liElement.querySelector('[data-id="exploreBtn"]');
+  if (exploreButton) {
+    exploreButton.addEventListener('click', () => {
+      window.location.assign(`/destination-detail.html?id=${destination.id}`);
+    });
+  }
 
   return liElement;
 }
@@ -36,6 +42,7 @@ export function renderDestinationList(destinationList) {
     destinationList.forEach((destination) => {
       const liElement = createDestinationElement(destination);
       ulElement.appendChild(liElement);
+      // console.log(liElement);
     });
   }
 }
