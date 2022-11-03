@@ -1,4 +1,4 @@
-import travelApi from './api/backPackTravelApi';
+import { travelApi } from './api/backPackTravelApi';
 import {
   budgetTipsApi,
   commentListApi,
