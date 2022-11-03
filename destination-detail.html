@@ -222,7 +222,7 @@
             </ul>
           </section>
 
-          <section class="related-guides">
+          <section class="related-guides" id="relatedGuides">
             <div class="related-guides__description">
               <h1 class="title-1">MY MUST HAVE GUIDES FOR TRAVELING</h1>
               <p class="text-content">Everything you neeed to know about traveling.</p>
@@ -333,7 +333,7 @@
               </div>
               <span data-id="amountHeart" class="me-4">2</span>
 
-              <a href="#">
+              <a href="#commentElement">
                 <i class="fa-regular fa-comment"></i>
                 <span>0</span>
               </a>
@@ -380,7 +380,7 @@
             </div>
           </section>
 
-          <section class="comments">
+          <section class="comments" id="commentElement">
             <h1 class="title-2">COMMENTS:</h1>
             <template id="commentItemTemp">
               <li class="comment-item row mb-2">
@@ -419,12 +419,12 @@
               </div>
 
               <div class="row mb-3">
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 mb-3">
                   <input placeholder="Your Name" type="text" class="w-100" name="author" />
                   <div class="mt-2 invalid-feedback">Please enter a valid name!</div>
                 </div>
 
-                <div class="col-md-4 col-12">
+                <div class="col-md-4 col-12 mb-3">
                   <input placeholder="Your Email" type="text" class="w-100" name="email" />
                   <div class="mt-2 invalid-feedback">Please enter a valid email!</div>
                 </div>
@@ -442,13 +442,13 @@
         <aside class="col-xl-3 d-none d-xl-block side-bar">
           <ul class="side-bar__list">
             <li>
-              <a href="#" class="d-flex">
+              <a href="#thingsToSee" class="d-flex">
                 <img src="./image/detail/destination-custom-icon-1.png" alt="" />
                 <h3 class="mt-2 title-2 text-uppercase">things to see</h3>
               </a>
             </li>
             <li>
-              <a href="#" class="d-flex">
+              <a href="#typicalCosts" class="d-flex">
                 <img src="./image/detail/destination-custom-icon-2.png" alt="" />
                 <h3 class="mt-2 title-2 text-uppercase">TYPICAL COSTS</h3>
               </a>
@@ -460,19 +460,19 @@
               </a>
             </li>
             <li>
-              <a href="#" class="d-flex">
+              <a href="#relatedGuides" class="d-flex">
                 <img src="./image/detail/destination-custom-icon-4.png" alt="" />
                 <h3 class="mt-2 title-2 text-uppercase">RELATED GUIDES</h3>
               </a>
             </li>
             <li>
-              <a href="#" class="d-flex">
+              <a href="#relatedArticles" class="d-flex">
                 <img src="./image/detail/destination-custom-icon-5-1.png" alt="" />
                 <h3 class="mt-2 title-2 text-uppercase">RELATED ARTICLES</h3>
               </a>
             </li>
             <li>
-              <a href="#" class="d-flex">
+              <a href="#commentElement" class="d-flex">
                 <img src="./image/detail/destination-custom-icon-6-1.png" alt="" />
                 <h3 class="mt-2 title-2 text-uppercase">COMMENTS</h3>
               </a>
@@ -483,7 +483,85 @@
     </main>
 
     <footer class="">
-      <div class="footer-copyright container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <div class="footer__map">
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">where we are now</h1>
+              </div>
+              <a href="#">
+                <img
+                  src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/footer-map-img.png"
+                  alt="brail-map"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div>
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">follow us</h1>
+              </div>
+              <ul class="row f-wrap footer__list-social">
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h6 class="mt-2">instagram</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <h6 class="mt-2">facebook</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                    <h6 class="mt-2">twitter</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-pinterest"></i>
+                    <h6 class="mt-2">pinterest</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                    <h6 class="mt-2">youtube</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-solid fa-rss"></i>
+                    <h6 class="mt-2">rss</h6>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div class="footer__subscribe">
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">newsletter</h1>
+              </div>
+              <form action="">
+                <input class="mb-3" type="text" placeholder="Enter your email" />
+                <button class="text-uppercase">subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid footer-copyright">
         <p>© 2018 Qode Interactive, All Rights Reserved</p>
       </div>
     </footer>
