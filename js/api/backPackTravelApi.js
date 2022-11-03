@@ -1,6 +1,6 @@
 import axiosClient from './axiosClient';
 
-const travelApi = {
+export const travelApi = {
   getAll(params) {
     const url = '/destination-list';
     return axiosClient.get(url, { params });
@@ -12,4 +12,4 @@ const travelApi = {
   },
 };
 
-export default travelApi;
+// export default travelApi;

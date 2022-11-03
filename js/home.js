@@ -1,5 +1,5 @@
-import travelApi from './api/backPackTravelApi';
 import { renderDestinationList, initBackToTopButton } from './utils';
+import { travelApi } from './api/backPackTravelApi';
 
 (async () => {
   // get Data from database

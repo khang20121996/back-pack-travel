@@ -1,4 +1,4 @@
-import travelApi from '../api/backPackTravelApi';
+import { travelApi } from '../api/backPackTravelApi';
 import { setImage } from './common';
 
 export async function initPagination(queryparams, paginationElement) {
