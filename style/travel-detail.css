@@ -328,6 +328,10 @@ figcaption {
   color: var(--text-color);
 }
 
+.content-footer__heart:hover {
+  cursor: pointer;
+}
+
 .content-footer__author--list-icon li a {
   font-size: 1.5rem;
 }

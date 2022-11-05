@@ -51,6 +51,19 @@ async function initComments(queryparams) {
   }
 }
 
+async function initAmountComment(queryparams) {
+  // set amount comment
+  try {
+    const commentList = await commentListApi.getByParentId(queryparams);
+    const amountCommentElement = document.getElementById('amountComment');
+    if (amountCommentElement) {
+      amountCommentElement.textContent = commentList.length;
+    }
+  } catch (error) {
+    console.log('get fail data', error);
+  }
+}
+
 function getCommentValues(form) {
   const formValues = {};
 
@@ -117,7 +130,7 @@ async function validateComment(form, commentValues) {
   return isValid;
 }
 
-function removeUnusedFields(queryparams, commentValues) {
+function handleFullField(queryparams, commentValues) {
   const payload = {
     idDestination: queryparams,
     avatar: 'https://secure.gravatar.com/avatar/35abd0f841f006c1533f3d113ff172a9?s=96&d=mm&r=g',
@@ -129,7 +142,8 @@ function removeUnusedFields(queryparams, commentValues) {
 
 async function handlePostSubmitComments(queryparams, commentValues) {
   try {
-    const payload = removeUnusedFields(queryparams, commentValues);
+    // Post new comment to data base
+    const payload = handleFullField(queryparams, commentValues);
     const data = JSON.stringify(payload);
     const newComment = await commentListApi.add(data);
 
@@ -137,6 +151,8 @@ async function handlePostSubmitComments(queryparams, commentValues) {
     const ulElement = document.getElementById('commentList');
     const liElement = renderComment(newComment);
     ulElement.appendChild(liElement);
+
+    initAmountComment(queryparams);
   } catch (error) {
     console.log('Post comment is fail', error);
   }
@@ -145,6 +161,7 @@ async function handlePostSubmitComments(queryparams, commentValues) {
 export function initPostComments(queryparams) {
   // get data from postComment -> add element to API -> apply DOM
   initComments(queryparams);
+  initAmountComment(queryparams);
 
   const form = document.getElementById('commentsForm');
   if (!form) return;
@@ -153,7 +170,6 @@ export function initPostComments(queryparams) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (submitting) return;
-    console.log('yaya');
 
     submitting = true;
     const commentValues = getCommentValues(form);

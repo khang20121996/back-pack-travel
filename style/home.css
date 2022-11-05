@@ -39,6 +39,17 @@ font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
 }
 
+.nav__icon li input {
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-family: var(--lora-font);
+  outline: none;
+  display: inline-block;
+}
+
 .nav__menu-item-travel {
   position: relative;
 }

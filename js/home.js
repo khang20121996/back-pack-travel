@@ -19,6 +19,7 @@ import { travelApi } from './api/backPackTravelApi';
     const loadMoreButton = document.getElementById('loadMoreBtn');
     if (loadMoreButton) {
       loadMoreButton.addEventListener('click', async () => {
+        console.log('click');
         queryparams = {
           _page: queryparams._page + 1,
           _limit: 4,

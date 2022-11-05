@@ -58,8 +58,16 @@ a {
   font-family: var(--lora-font);
 }
 
+a:hover {
+  color: #000;
+}
+
 .nav .nav__link {
   text-decoration: none;
+}
+
+figcaption {
+  font-size: 0.6rem;
 }
 
 button {

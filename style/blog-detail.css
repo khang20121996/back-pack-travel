@@ -1,0 +1,69 @@
+.blog-detail__banner img {
+  width: 400px;
+}
+
+.blog-detail__banner {
+  padding: 4rem;
+}
+
+.blog-content {
+}
+
+.blog-content__thumbnail {
+}
+
+.blog-content__national {
+  font-family: var(--inspiration-font);
+}
+
+.blog-content__title {
+  font-size: 1.4rem;
+}
+
+.blog-content__tag {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+}
+
+.blog-content__maxim {
+  padding: 2rem 6rem;
+  font-family: var(--montserrat-font);
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: var(--title-color);
+}
+
+/* Side bar */
+.blog-sidebar {
+  padding: 1rem;
+}
+
+.blog-sidebar__instagram a {
+  position: relative;
+}
+
+.blog-sidebar__instagram-icon {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  font-size: 3rem;
+  color: #fff;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.blog-sidebar__instagram a:hover .blog-sidebar__instagram-icon {
+  display: block;
+}
+
+.blog-sidebar__instagram-img {
+  width: 135px;
+  filter: brightness(100%);
+  transition: all 0.4s ease;
+}
+
+.blog-sidebar__instagram a:hover .blog-sidebar__instagram-img {
+  filter: brightness(80%);
+}

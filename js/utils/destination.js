@@ -1,4 +1,5 @@
 import { setTextContent, setImage } from './common';
+import debounce from 'lodash.debounce';
 
 function createDestinationElement(destination) {
   if (!destination) return;
@@ -24,9 +25,11 @@ function createDestinationElement(destination) {
   // attach event for explore button
   const exploreButton = liElement.querySelector('[data-id="exploreBtn"]');
   if (exploreButton) {
-    exploreButton.addEventListener('click', () => {
-      window.location.assign(`/destination-detail.html?id=${destination.id}`);
-    });
+    const debounceSearch = debounce(
+      () => window.location.assign(`/destination-detail.html?id=${destination.id}`),
+      500
+    );
+    exploreButton.addEventListener('click', debounceSearch);
   }
 
   return liElement;
