@@ -12,4 +12,14 @@ export const travelApi = {
   },
 };
 
-// export default travelApi;
+export const shopApi = {
+  getAll(params) {
+    const url = '/products';
+    return axiosClient.get(url, { params });
+  },
+
+  getById(id) {
+    const url = `/products/${id}`;
+    return axiosClient.get(url);
+  },
+};

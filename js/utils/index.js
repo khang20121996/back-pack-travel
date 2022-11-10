@@ -3,3 +3,4 @@ export * from './common';
 export * from './destination';
 export * from './pagination';
 export * from './post-comment';
+export * from './navigation-menu';

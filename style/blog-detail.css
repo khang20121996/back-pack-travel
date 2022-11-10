@@ -67,3 +67,21 @@
 .blog-sidebar__instagram a:hover .blog-sidebar__instagram-img {
   filter: brightness(80%);
 }
+
+.blog-sidebar__lasted-post ul {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-sidebar__lasted-post ul li img {
+  width: 36%;
+}
+
+.blog-sidebar__lasted-post ul li h1 {
+  font-size: 1rem;
+}
+
+.blog-sidebar__lasted-post ul li h1:hover {
+  color: var(--text-color);
+}

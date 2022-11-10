@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backpack Traveler</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" /> -->
+
+    <!-- Use Lora, Montserrat, Inspiration Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inspiration&family=Lora&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/home.css" />
+    <link rel="stylesheet" href="../style/shop.css" />
+  </head>
+  <body>
+    <!-- Template -->
+    <template id="templateProduct">
+      <li class="col-12 col-md-6 col-xl-4 text-center product-item">
+        <div data-id="productItem">
+          <img
+            class=""
+            src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc-1t-1-600x600.png"
+            alt="produc-1t-1"
+            data-id="thumbnail"
+          />
+          <div class="d-flex justify-content-center product-item__rated" data-id="listRating"></div>
+          <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2" data-id="name"></h1>
+          <div class="fst-italic product-item__hover">Buy for $<span data-id="price"></span></div>
+        </div>
+        <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
+      </li>
+    </template>
+
+    <!-- Navigation -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
+              alt="Logo-backpack-travel"
+              width="200"
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__menu">
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3 nav__menu-item-travel">
+                <a class="text-uppercase nav-link" href="#">Travel</a>
+                <i class="fa-solid fa-star"></i>
+              </li>
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="text-uppercase nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="text-uppercase nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                  <li><a class="dropdown-item" href="#">About Me</a></li>
+                  <li><a class="dropdown-item" href="#">Destination Map</a></li>
+                  <li><a class="dropdown-item" href="#">FAQ Page</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="d-flex nav__icon">
+              <li class="">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li class="ms-3">
+                <input type="text" placeholder="Search..." />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="">
+      <div class="shop-banner text-center">
+        <h1 class="title text-uppercase">shop</h1>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-9">
+            <div class="product-filter d-flex justify-content-between flex-wrap">
+              <p class="text-content">Showing all 9 results</p>
+
+              <div class="nav-item dropdown">
+                <a
+                  class="text-uppercase nav-link dropdown-toggle title-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="sortingElement"
+                >
+                  DEFAULT SORTING
+                </a>
+                <ul class="dropdown-menu" id="listSorting">
+                  <li><a class="dropdown-item" data-id="sortDefault">Default sorting</a></li>
+                  <li>
+                    <a class="dropdown-item" data-id="sortRating">Sort by average rating</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-id="sortLowToHight">Sort by price: low to high</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" data-id="sortHightToLow">Sort by price: high to low</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <ul class="product-list row" id="productList"></ul>
+          </div>
+
+          <aside class="col-xl-3 d-none d-xl-block shop-sidebar">
+            <div class="blog-sidebar">
+              <div class="blog-sidebar__instagram mb-4">
+                <div class="footer__title-wrap text-center mb-4">
+                  <span></span>
+                  <h1 class="footer__title text-uppercase">categories</h1>
+                </div>
+                <ul>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                  <li class="mb-3 ms-3">
+                    <a href="#" class="title-2">ADVENTURE</a>
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/blog-sidebar-img-2.jpg"
+                alt=""
+                class="w-100 mt-4"
+              />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-4 mb-4">
+            <div class="footer__map">
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">where we are now</h1>
+              </div>
+              <a href="#">
+                <img
+                  src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/footer-map-img.png"
+                  alt="brail-map"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4 mb-4">
+            <div>
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">follow us</h1>
+              </div>
+              <ul class="row f-wrap footer__list-social">
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h6 class="mt-2">instagram</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <h6 class="mt-2">facebook</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                    <h6 class="mt-2">twitter</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-pinterest"></i>
+                    <h6 class="mt-2">pinterest</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                    <h6 class="mt-2">youtube</h6>
+                  </a>
+                </li>
+                <li class="col-4">
+                  <a href="#">
+                    <i class="fa-solid fa-rss"></i>
+                    <h6 class="mt-2">rss</h6>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-4">
+            <div class="footer__subscribe">
+              <div class="footer__title-wrap text-center mb-4">
+                <span></span>
+                <h1 class="footer__title text-uppercase">newsletter</h1>
+              </div>
+              <form action="">
+                <input class="mb-3" type="text" placeholder="Enter your email" />
+                <button class="text-uppercase">subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid footer-copyright">
+        <p>© 2018 Qode Interactive, All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Button back to top -->
+    <button class="btn--back-to-top" id="backToTop">Top</button>
+
+    <!-- Modal -->
+
+    <!-- Bootstrap Script  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Scripts should be placed here to prevent blocking render UI -->
+    <script type="module" src="../js/shop/shop.js"></script>
+  </body>
+</html>

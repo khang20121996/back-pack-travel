@@ -1,4 +1,4 @@
-import { renderDestinationList, initBackToTopButton } from './utils';
+import { renderDestinationList, initBackToTopButton, handleNavMenu } from './utils';
 import { travelApi } from './api/backPackTravelApi';
 
 (async () => {
@@ -33,6 +33,8 @@ import { travelApi } from './api/backPackTravelApi';
         }
       });
     }
+    // attach event navigation
+    handleNavMenu('navMenu');
 
     // attach event back to top button
     const backToTopBtn = document.getElementById('backToTop');
