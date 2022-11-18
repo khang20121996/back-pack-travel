@@ -34,7 +34,6 @@ import { travelApi } from './api/backPackTravelApi';
       });
     }
     // attach event navigation
-    handleNavMenu('navMenu');
 
     // attach event back to top button
     const backToTopBtn = document.getElementById('backToTop');

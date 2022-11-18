@@ -18,11 +18,14 @@ function createProductElement(product) {
   //  attach event click for li element
   const productItemElement = liElement.querySelector('[data-id="productItem"]');
   if (productItemElement) {
-    const debounceSearch = debounce(
-      () => window.location.assign(`../shop/product-detail.html?id=${product.id}`),
-      500
-    );
-    productItemElement.addEventListener('click', debounceSearch);
+    // const debounceSearch = debounce(
+    //   () => window.open(`../shop/product-detail.html?id=${product.id}`, '_blank'),
+    //   500
+    // );
+    // productItemElement.addEventListener('click', debounceSearch);
+    productItemElement.addEventListener('mousedown', () => {
+      productItemElement.href = `../shop/product-detail.html?id=${product.id}`;
+    });
   }
 
   return liElement;
@@ -169,7 +172,7 @@ function initSortingProduct(productList) {
   // Render products to DOM
   try {
     const productList = await shopApi.getAll();
-    initSortingProduct(productList);
     renderProducts(productList);
+    initSortingProduct(productList);
   } catch (error) {}
 })();

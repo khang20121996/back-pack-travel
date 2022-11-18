@@ -25,7 +25,6 @@ font-family: 'Montserrat', sans-serif;
 }
 /* Navigation */
 .navbar-brand {
-  margin-right: 200px;
 }
 
 .nav__menu li a {
@@ -74,7 +73,6 @@ font-family: 'Montserrat', sans-serif;
 
 @media (max-width: 768px) {
   .navbar-brand {
-    margin-bottom: 2rem;
     margin-right: 0;
   }
 

@@ -35,43 +35,121 @@
   <body>
     <!-- Navigation -->
     <header class="">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">
+      <nav class="navbar fixed-top navbar-light bg-light py-0 px-0">
+        <div class="d-flex container" id="navbar-custom-markup">
+          <a href="https://google.com" class="navbar-brand p-2" id="navbar-hlink-markup">
             <img
               src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
               alt="Logo-backpack-travel"
               width="200"
-            />
-            <div class="carousel-caption d-none d-md-block"></div>
-          </a>
+          /></a>
+
+          <ul
+            class="navbar-nav d-xl-flex flex-row text-center nav__menu d-none"
+            id="navbar-media-markup"
+          >
+            <li class="nav-item me-3 px-1">
+              <a
+                href="index.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1 nav__menu-item-travel">
+              <a
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >Travel</a
+              >
+              <i class="fa-solid fa-star"></i>
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="blog/blog.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >blog</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="shop/shop.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >shop</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >About Me</a
+              >
+            </li>
+          </ul>
+
+          <ul class="d-xl-flex nav__icon d-none">
+            <li class="">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li class="ms-3">
+              <input type="text" placeholder="Search..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
 
           <button
-            class="navbar-toggler"
+            class="navbar-toggler d-block d-xl-none my-3"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarNavDarkDropdown"
+            aria-controls="navbarNavDarkDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__menu">
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <!-- <ul class="navbar-nav me-auto mb-lg-0 nav__menu d-xl-none d-block">
               <li class="nav-item me-3">
-                <a class="text-uppercase nav-link active" href="#">Home</a>
+                <a class="text-uppercase nav-link active">Home</a>
               </li>
               <li class="nav-item me-3 nav__menu-item-travel">
-                <a class="text-uppercase nav-link" href="#">Travel</a>
+                <a class="text-uppercase nav-link">Travel</a>
                 <i class="fa-solid fa-star"></i>
               </li>
-              <li class="nav-item me-3">
-                <a class="text-uppercase nav-link" href="#">Blog</a>
+              <li class="nav-item me-3" id="blog">
+                <a class="text-uppercase nav-link">Blog</a>
               </li>
               <li class="nav-item me-3">
-                <a class="text-uppercase nav-link" href="#">Shop</a>
+                <a class="text-uppercase nav-link" href="#" id="shop">shop</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -91,7 +169,80 @@
                 </ul>
               </li>
             </ul>
+
             <ul class="d-flex nav__icon">
+              <li class="">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul> -->
+            <ul class="navbar-na nav__menu d-xl-none" id="navbar-media-markup">
+              <li class="nav-item mb-2">
+                <a
+                  href="index.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item mb-2 nav__menu-item-travel">
+                <a
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >Travel</a
+                >
+                <i class="fa-solid fa-star"></i>
+              </li>
+
+              <li class="nav-item mb-2">
+                <a
+                  href="blog/blog.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >blog</a
+                >
+              </li>
+
+              <li class="nav-item mb-2">
+                <a
+                  href="shop/shop.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >shop</a
+                >
+              </li>
+
+              <li class="nav-item mb-2">
+                <a
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >About Me</a
+                >
+              </li>
+            </ul>
+
+            <ul class="d-flex nav__icon d-xl-none mb-4">
               <li class="">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
               </li>
@@ -113,7 +264,6 @@
         </div>
       </nav>
     </header>
-
     <!-- Main -->
     <main class="container">
       <div class="page-link mb-4">

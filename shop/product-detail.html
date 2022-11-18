@@ -36,63 +36,167 @@
   <body>
     <!-- Navigation -->
     <header class="">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">
+      <nav class="navbar fixed-top navbar-light bg-light py-0 px-0">
+        <div class="d-flex container" id="navbar-custom-markup">
+          <a href="https://google.com" class="navbar-brand p-2" id="navbar-hlink-markup">
             <img
               src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
               alt="Logo-backpack-travel"
               width="200"
-            />
-            <div class="carousel-caption d-none d-md-block"></div>
-          </a>
+          /></a>
+
+          <ul
+            class="navbar-nav d-xl-flex flex-row text-center nav__menu d-none"
+            id="navbar-media-markup"
+          >
+            <li class="nav-item me-3 px-1">
+              <a
+                href="index.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1 nav__menu-item-travel">
+              <a
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >Travel</a
+              >
+              <i class="fa-solid fa-star"></i>
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="blog/blog.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >blog</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="shop/shop.html"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase active"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >shop</a
+              >
+            </li>
+
+            <li class="nav-item me-3 px-1">
+              <a
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                alt="Link to Cassie Gazette Page"
+                title="Link to Cassie Gazette Page"
+                aria-label="Link to Cassie Gazette Page"
+                >About Me</a
+              >
+            </li>
+          </ul>
+
+          <ul class="d-xl-flex nav__icon d-none">
+            <li class="">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li class="ms-3">
+              <input type="text" placeholder="Search..." />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
 
           <button
-            class="navbar-toggler"
+            class="navbar-toggler d-block d-xl-none my-3"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarNavDarkDropdown"
+            aria-controls="navbarNavDarkDropdown"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav__menu">
-              <li class="nav-item me-3">
-                <a class="text-uppercase nav-link active" href="#">Home</a>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-na nav__menu d-xl-none" id="navbar-media-markup">
+              <li class="nav-item mb-2">
+                <a
+                  href="index.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >Home</a
+                >
               </li>
-              <li class="nav-item me-3 nav__menu-item-travel">
-                <a class="text-uppercase nav-link" href="#">Travel</a>
+
+              <li class="nav-item mb-2 nav__menu-item-travel">
+                <a
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >Travel</a
+                >
                 <i class="fa-solid fa-star"></i>
               </li>
-              <li class="nav-item me-3">
-                <a class="text-uppercase nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item me-3">
-                <a class="text-uppercase nav-link" href="#">Shop</a>
-              </li>
-              <li class="nav-item dropdown">
+
+              <li class="nav-item mb-2">
                 <a
-                  class="text-uppercase nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  href="blog/blog.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >blog</a
                 >
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Who We Are</a></li>
-                  <li><a class="dropdown-item" href="#">About Me</a></li>
-                  <li><a class="dropdown-item" href="#">Destination Map</a></li>
-                  <li><a class="dropdown-item" href="#">FAQ Page</a></li>
-                </ul>
+              </li>
+
+              <li class="nav-item mb-2">
+                <a
+                  href="shop/shop.html"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase active"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >shop</a
+                >
+              </li>
+
+              <li class="nav-item mb-2">
+                <a
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  alt="Link to Cassie Gazette Page"
+                  title="Link to Cassie Gazette Page"
+                  aria-label="Link to Cassie Gazette Page"
+                  >About Me</a
+                >
               </li>
             </ul>
-            <ul class="d-flex nav__icon">
+
+            <ul class="d-flex nav__icon d-xl-none mb-4">
               <li class="">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
               </li>
@@ -122,39 +226,28 @@
       </div>
 
       <div class="container">
-        <div class="row product-detail">
+        <div class="row product-detail" id="product">
           <div class="col-12 col-xl-4">
-            <img
-              src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc4.png"
-              alt="produc-image"
-              class="w-100"
-            />
+            <img src="" alt="produc-image" class="w-100" data-id="image" />
           </div>
+
           <div class="col-12 col-xl-8">
-            <div class="d-flex product-item__rated align-items-center">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <p class="text-content ms-2">(<span>2</span> customer reviews)</p>
-            </div>
-            <h1 class="product-detail__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-            <p class="fst-italic text-content mb-4">Buy for $<span>24.00</span></p>
-            <p class="product-detail__desc text-content mb-5">
-              Eam tale eros civibus ad. Vel cu habemus iudicabit referrentur, cu est autem omnesque.
-              Dolorum accusamus at vel, duo putent accommodare ei. In veritus tacimates convenire
-              mea, eam quas falli eripuit et. Ne graece audiam sea, fabellas urbanitas assueverit
-              sea.
-            </p>
+            <div class="d-flex product-item__rated align-items-center" data-id="rating"></div>
+
+            <h1 class="product-detail__name title-2 text-uppercase mt-3 mb-2" data-id="name"></h1>
+            <p class="fst-italic text-content mb-4">Buy for $<span data-id="price"></span>.00</p>
+            <p class="product-detail__desc text-content mb-5" data-id="description">asdasdsa</p>
+
             <form class="product-detail__form" action="">
               <input type="number" value="1" class="" min="1" />
               <button class="text-uppercase">add to cart</button>
             </form>
+
             <p class="product-detail__desc text-content">Category: <span>Book</span></p>
             <p class="product-detail__desc text-content mb-2">
               Tags: <span>Adventure, tourist</span>
             </p>
+
             <ul class="d-flex mt-4 product-detail__icon">
               <li>
                 <a href="https://www.facebook.com/" class="facebook">
@@ -179,7 +272,7 @@
           <li class="nav-item" role="presentation">
             <button
               class="nav-link fst-italic active text-content"
-              id="home-tab"
+              id="description-tab"
               data-bs-toggle="tab"
               data-bs-target="#home"
               type="button"
@@ -190,10 +283,11 @@
               Description
             </button>
           </li>
+
           <li class="nav-item" role="presentation">
             <button
               class="nav-link fst-italic text-content"
-              id="profile-tab"
+              id="infor-tab"
               data-bs-toggle="tab"
               data-bs-target="#profile"
               type="button"
@@ -204,10 +298,11 @@
               Additional information
             </button>
           </li>
+
           <li class="nav-item" role="presentation">
             <button
               class="nav-link fst-italic text-content"
-              id="contact-tab"
+              id="review-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact"
               type="button"
@@ -215,10 +310,11 @@
               aria-controls="contact"
               aria-selected="false"
             >
-              Reviews <span></span>
+              Reviews (<span data-id="numOfComments"></span>)
             </button>
           </li>
         </ul>
+
         <div class="tab-content product-tab__content mt-5" id="myTabContent">
           <div
             class="tab-pane fade show active"
@@ -226,13 +322,7 @@
             role="tabpanel"
             aria-labelledby="home-tab"
           >
-            <p class="text-content mb-3">
-              Eu tollit nonumy oblique pri, qui ne equidem interesset, usu ea quando facilisi
-              senserit. Eu sit aliquid vituperata omittantur. Eos in quis mundi, ne sit possit
-              possim, eu sint viris quo. Facilis sensibus eam ea, elit ocurreret has. Quo ei corpora
-              constituam, discere reprimique. No qui posse deseruisse. Cu vel choro iracundia, has
-              cu modus mucius expetenda, oblique singulis eleifend an nec vitae impedit dignissim.
-            </p>
+            <p class="text-content mb-3" data-id="description"></p>
             <h1 class="text-content">What’s inside?</h1>
             <ul>
               <li>
@@ -253,39 +343,35 @@
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="d-flex align-items-center">
               <h1 class="text-content me-3">Weight:</h1>
-              <p class="text-content">1kg</p>
+              <p class="text-content" data-id="weight"></p>
             </div>
             <div class="d-flex align-items-center">
               <h1 class="text-content me-3">Dimensions:</h1>
-              <p class="text-content">15 × 15 × 15 cm</p>
+              <p class="text-content" data-id="dimensions"></p>
             </div>
           </div>
 
           <div class="tab-pane fade row" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-            <section class="comments product-tab__review col-12 col-xl-6" id="commentElement">
+            <section class="comments product-tab__review col-12 col-xl-6" id="reviewElement">
               <h1 class="title-2 mb-5">Reviews:</h1>
-              <ul class="comment-list mb-5" id="commentList">
-                <li class="comment-item d-flex mb-2">
+              <ul class="comment-list mb-5" id="reviewList"></ul>
+
+              <template id="reviewTemplate">
+                <li class="comment-item d-flex mb-5">
                   <div class="me-3">
-                    <img
-                      src="https://secure.gravatar.com/avatar/78d84e1cdbe143fb65ec87e9e6baa296?s=120&d=mm&r=g"
-                      alt="avatar"
-                      class="w-xl-100"
-                      data-id="avatar"
-                    />
+                    <img src="" alt="avatar" class="w-xl-100" data-id="avatar" />
                   </div>
                   <div class="">
-                    <div class="d-flex product-item__rated align-items-center">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
+                    <div
+                      class="d-flex product-item__rated align-items-center"
+                      data-id="rating"
+                    ></div>
+
                     <div class="d-sm-flex align-items-center mb-1 mt-3">
-                      <h3 class="me-4 mb-md-0 mb-2" data-id="author">KhangNguyen</h3>
-                      <span class="mt-1" data-id="date">22.12.2022</span>
+                      <h3 class="me-4 mb-md-0 mb-2" data-id="author"></h3>
+                      <span class="mt-1" data-id="date"></span>
                     </div>
+
                     <p class="text-content" data-id="content">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate
                       saepe earum eum perferendis doloribus esse nobis cumque commodi natus non
@@ -294,22 +380,24 @@
                     <!-- <button data-id="remove" id="remove">remove</button> -->
                   </div>
                 </li>
-              </ul>
+              </template>
 
               <h1 class="title-2 mb-4">ADD A REVIEW:</h1>
               <form
                 class="product-form__review was-validated comment-post"
-                id="commentsForm"
+                id="reviewForm"
                 novalidate
               >
                 <p class="text-content">Your rating*</p>
+
                 <div class="d-flex product-item__rated align-items-center mt-3 mb-5">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star" data-id="rating"></i>
+                  <i class="fa-regular fa-star" data-id="rating"></i>
+                  <i class="fa-regular fa-star" data-id="rating"></i>
+                  <i class="fa-regular fa-star" data-id="rating"></i>
+                  <i class="fa-regular fa-star" data-id="rating"></i>
                 </div>
+
                 <div class="mb-4">
                   <textarea
                     placeholder="Your reivew..."
@@ -357,7 +445,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div>
+                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
               </a>
               <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
             </li>
@@ -377,7 +465,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div>
+                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
               </a>
               <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
             </li>
@@ -397,7 +485,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div>
+                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
               </a>
               <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
             </li>
@@ -417,7 +505,7 @@
                   <i class="fa-solid fa-star"></i>
                 </div>
                 <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div>
+                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
               </a>
               <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
             </li>

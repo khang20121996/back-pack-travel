@@ -22,4 +22,9 @@ export const shopApi = {
     const url = `/products/${id}`;
     return axiosClient.get(url);
   },
+
+  update(data, id) {
+    const url = `/products/${id}`;
+    return axiosClient.patch(url, data);
+  },
 };

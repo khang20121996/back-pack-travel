@@ -40,6 +40,10 @@
 }
 
 /* Form */
+.product-item__rated i:hover {
+  cursor: pointer;
+}
+
 .product-tab__review ul li img {
   width: 80px;
 }
