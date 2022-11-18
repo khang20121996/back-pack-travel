@@ -1,9 +1,10 @@
 export function handleNavMenu() {
-  const shopButton = document.getElementById('shop');
-  if (shopButton) {
-    shopButton.addEventListener('click', (e) => {
-      //   window.location.assign('./shop/shop.html');
-      console.log('click shop');
+  const shopLinkList = document.querySelectorAll('.shop__page');
+  if (shopLinkList) {
+    shopLinkList.forEach((shopLink) => {
+      shopLink.addEventListener('mousedown', (e) => {
+        shopLink.href = './shop/shop.html';
+      });
     });
   }
 

@@ -38,6 +38,7 @@ import { travelApi } from './api/backPackTravelApi';
     // attach event back to top button
     const backToTopBtn = document.getElementById('backToTop');
     initBackToTopButton(backToTopBtn);
+    handleNavMenu();
   } catch (error) {
     console.log('get all fail', error);
     // show modal..

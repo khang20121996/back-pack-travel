@@ -40,5 +40,6 @@ function renderProduct(product) {
     const product = await shopApi.getById(queryparams);
 
     renderProduct(product);
+    // renderRe
   } catch (error) {}
 })();
