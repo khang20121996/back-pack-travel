@@ -184,6 +184,11 @@ export function initShopReviews(product) {
     ['content', 'author', 'email'].forEach(
       (name) => (form.querySelector(`[name="${name}"]  `).value = '')
     );
+    const ratingElementList = form.querySelectorAll('[data-id="rating"]');
+    ratingElementList.forEach((ratingElement) => {
+      ratingElement.classList.remove('fa-solid');
+      ratingElement.classList.add('fa-regular');
+    });
 
     window.scrollTo(0, 1500);
 

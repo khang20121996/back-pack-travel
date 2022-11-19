@@ -31,9 +31,9 @@ function createProductElement(product) {
   return liElement;
 }
 
-function renderProducts(productList) {
+export function renderProducts(productList, ulElementId) {
   if (!productList || !Array.isArray(productList)) return;
-  const ulElement = document.getElementById('productList');
+  const ulElement = document.getElementById(ulElementId);
   if (!ulElement) return;
 
   // reset list product when using sorting function
@@ -172,7 +172,7 @@ function initSortingProduct(productList) {
   // Render products to DOM
   try {
     const productList = await shopApi.getAll();
-    renderProducts(productList);
+    renderProducts(productList, 'productList');
     initSortingProduct(productList);
   } catch (error) {}
 })();

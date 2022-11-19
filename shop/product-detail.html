@@ -429,87 +429,29 @@
 
         <div class="related-product">
           <h1 class="product-detail__name title-2 text-uppercase mt-3 mb-5">related product</h1>
-          <ul class="product-list row">
+          <template id="templateRelatedProd">
             <li class="col-12 col-md-6 col-xl-3 text-center product-item">
-              <a href="#">
+              <a href="#" data-id="productItem">
                 <img
                   class=""
                   src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc-1t-1-600x600.png"
                   alt="produc-1t-1"
+                  data-id="thumbnail"
                 />
-                <div class="d-flex justify-content-center product-item__rated">
+                <div class="d-flex justify-content-center product-item__rated" data-id="listRating">
+                  <!-- <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i> -->
                 </div>
-                <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
+                <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2" data-id="name"></h1>
                 <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
               </a>
               <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
             </li>
-
-            <li class="col-12 col-md-6 col-xl-3 text-center product-item">
-              <a href="#">
-                <img
-                  class=""
-                  src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc-1t-1-600x600.png"
-                  alt="produc-1t-1"
-                />
-                <div class="d-flex justify-content-center product-item__rated">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
-              </a>
-              <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
-            </li>
-
-            <li class="col-12 col-md-6 col-xl-3 text-center product-item">
-              <a href="#">
-                <img
-                  class=""
-                  src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc-1t-1-600x600.png"
-                  alt="produc-1t-1"
-                />
-                <div class="d-flex justify-content-center product-item__rated">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
-              </a>
-              <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
-            </li>
-
-            <li class="col-12 col-md-6 col-xl-3 text-center product-item">
-              <a href="#">
-                <img
-                  class=""
-                  src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc-1t-1-600x600.png"
-                  alt="produc-1t-1"
-                />
-                <div class="d-flex justify-content-center product-item__rated">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2">501 places</h1>
-                <!-- <div class="fst-italic product-item__hover">Buy for <span>$22.00</span></div> -->
-              </a>
-              <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
-            </li>
-          </ul>
+          </template>
+          <ul class="product-list row" id="relatedProdList"></ul>
         </div>
       </div>
     </main>

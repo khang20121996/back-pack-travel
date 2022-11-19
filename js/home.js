@@ -1,4 +1,4 @@
-import { renderDestinationList, initBackToTopButton, handleNavMenu } from './utils';
+import { renderDestinationList, initBackToTopButton, handleNavHomeMenu } from './utils';
 import { travelApi } from './api/backPackTravelApi';
 
 (async () => {
@@ -38,7 +38,7 @@ import { travelApi } from './api/backPackTravelApi';
     // attach event back to top button
     const backToTopBtn = document.getElementById('backToTop');
     initBackToTopButton(backToTopBtn);
-    handleNavMenu();
+    handleNavHomeMenu();
   } catch (error) {
     console.log('get all fail', error);
     // show modal..

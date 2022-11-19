@@ -1,4 +1,19 @@
-export function handleNavMenu() {
+export function handleNavHomeMenu() {
+  const homeLinkList = document.querySelectorAll('.shop__page');
+  if (homeLinkList) {
+    homeLinkList.forEach((homeLink) => {
+      homeLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.assign('../index.html');
+      });
+
+      homeLink.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        homeLink.href = '../index.html';
+      });
+    });
+  }
+
   const shopLinkList = document.querySelectorAll('.shop__page');
   if (shopLinkList) {
     shopLinkList.forEach((shopLink) => {
@@ -14,11 +29,18 @@ export function handleNavMenu() {
     });
   }
 
-  //   const blogButton = navMenuElement.querySelector('[data-id="blog"]');
-  //   if (blogButton) {
-  //     blogButton.addEventListener('click', () => {
-  //       //   window.location.assign('./blog/blog.html');
-  //       console.log('click blog');
-  //     });
-  //   }
+  const blogLinkList = document.querySelectorAll('.blog__page');
+  if (blogLinkList) {
+    blogLinkList.forEach((blogLink) => {
+      blogLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.assign('blog/blog.html');
+      });
+
+      blogLink.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        blogLink.href = './blog/blog.html';
+      });
+    });
+  }
 }

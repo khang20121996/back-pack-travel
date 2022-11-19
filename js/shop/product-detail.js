@@ -33,7 +33,41 @@ function renderProduct(product) {
   initShopReviews(product);
 }
 
-function renderRelatedProduct(queryparams) {}
+function createRelatedProductElement(product) {
+  const templateElement = document.getElementById('templateRelatedProd');
+  if (!templateElement) return;
+  const liElement = templateElement.content.firstElementChild.cloneNode(true);
+
+  // set text content for li element
+  setImage(liElement, '[data-id="thumbnail"]', product.image);
+  setTextContent(liElement, '[data-id="name"]', product.name);
+  setTextContent(liElement, '[data-id="price"]', product.price);
+  setRating(liElement, '[data-id="listRating"]', product.rating);
+  liElement.dataset.id = product.id;
+
+  const productItemElement = liElement.querySelector('[data-id="productItem"]');
+  if (productItemElement) {
+    productItemElement.addEventListener('mousedown', () => {
+      productItemElement.href = `../shop/product-detail.html?id=${product.id}`;
+    });
+  }
+
+  return liElement;
+}
+
+function renderRelatedProduct(relatedProdList) {
+  if (!relatedProdList || !Array.isArray(relatedProdList)) return;
+  const ulElement = document.getElementById('relatedProdList');
+  if (!ulElement) return;
+
+  // reset list product when using sorting function
+  ulElement.innerHTML = '';
+
+  relatedProdList.forEach((product) => {
+    const liElement = createRelatedProductElement(product);
+    ulElement.appendChild(liElement);
+  });
+}
 
 (async () => {
   try {
@@ -41,7 +75,19 @@ function renderRelatedProduct(queryparams) {}
     const queryparams = url.searchParams.get('id');
     const product = await shopApi.getById(queryparams);
 
+    const productList = await shopApi.getAll();
+    const relatedProdList = [];
+    let j = 0;
+    for (let i = Number(queryparams); i < Number(queryparams) + 4; i++) {
+      if (i < 9) {
+        relatedProdList.push(productList[i]);
+      } else {
+        relatedProdList.push(productList[j]);
+        j++;
+      }
+    }
+
     renderProduct(product);
-    renderRelatedProduct(queryparams);
+    renderRelatedProduct(relatedProdList);
   } catch (error) {}
 })();
