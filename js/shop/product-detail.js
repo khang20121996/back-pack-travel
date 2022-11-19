@@ -33,6 +33,8 @@ function renderProduct(product) {
   initShopReviews(product);
 }
 
+function renderRelatedProduct(queryparams) {}
+
 (async () => {
   try {
     const url = new URL(window.location);
@@ -40,6 +42,6 @@ function renderProduct(product) {
     const product = await shopApi.getById(queryparams);
 
     renderProduct(product);
-    // renderRe
+    renderRelatedProduct(queryparams);
   } catch (error) {}
 })();

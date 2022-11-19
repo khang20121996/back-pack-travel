@@ -4,7 +4,7 @@ export function handleNavMenu() {
     shopLinkList.forEach((shopLink) => {
       shopLink.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.assign('/shop/shop.html');
+        window.location.assign('shop/shop.html');
       });
 
       shopLink.addEventListener('mousedown', (e) => {
