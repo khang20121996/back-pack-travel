@@ -30,14 +30,16 @@
     <!-- Internal CSS -->
     <link rel="stylesheet" href="../style/main.css" />
     <link rel="stylesheet" href="../style/home.css" />
-    <link rel="stylesheet" href="../style/blog.css" />
+    <link rel="stylesheet" href="../style/shop.css" />
+    <link rel="stylesheet" href="../style/product-detail.css" />
+    <link rel="stylesheet" href="../style/cart.css" />
   </head>
   <body>
     <!-- Navigation -->
     <header class="">
       <nav class="navbar fixed-top navbar-light bg-light py-0 px-0">
         <div class="d-flex container" id="navbar-custom-markup">
-          <a href="https://google.com" class="navbar-brand p-2" id="navbar-hlink-markup">
+          <a href="#" class="navbar-brand p-2 home__page" id="navbar-hlink-markup">
             <img
               src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
               alt="Logo-backpack-travel"
@@ -50,8 +52,8 @@
           >
             <li class="nav-item me-3 px-1">
               <a
-                href="index.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase home__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -73,8 +75,8 @@
 
             <li class="nav-item me-3 px-1">
               <a
-                href="blog/blog.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase blog__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -84,8 +86,8 @@
 
             <li class="nav-item me-3 px-1">
               <a
-                href="shop/shop.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase active shop__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -119,6 +121,13 @@
               <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li class="ms-3">
+              <a href="#" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-amount">0</span>
+              </a>
+            </li>
+
+            <li class="ms-3">
               <input type="text" placeholder="Search..." />
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
@@ -140,8 +149,8 @@
             <ul class="navbar-na nav__menu d-xl-none" id="navbar-media-markup">
               <li class="nav-item mb-2">
                 <a
-                  href="index.html"
-                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase active home__page"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
                   aria-label="Link to Cassie Gazette Page"
@@ -163,7 +172,7 @@
 
               <li class="nav-item mb-2">
                 <a
-                  href="blog/blog.html"
+                  href=""
                   class="nav-link py-1 navbar-bold-markup text-uppercase"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
@@ -174,8 +183,8 @@
 
               <li class="nav-item mb-2">
                 <a
-                  href="shop/shop.html"
-                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase shop__page"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
                   aria-label="Link to Cassie Gazette Page"
@@ -209,6 +218,12 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
               </li>
               <li class="ms-3">
+                <a href="#" class="cart-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="cart-amount">0</span>
+                </a>
+              </li>
+              <li class="ms-3">
                 <input type="text" placeholder="Search..." />
                 <i class="fa-solid fa-magnifying-glass"></i>
               </li>
@@ -217,140 +232,64 @@
         </div>
       </nav>
     </header>
+
     <!-- Main -->
-    <main class="container">
-      <div class="page-link mb-4">
-        <ul class="row">
-          <li class="col-3 col-xl-2">
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/header-img-1.png"
-                alt="getinspiredImg"
-                class=""
-              />
-            </a>
-            <p>Get Inspired</p>
-          </li>
-
-          <li class="col-3 col-xl-2 pe-0 pe-xl-5">
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/header-img-2.png"
-                alt="getinspiredImg"
-                class=""
-              />
-            </a>
-            <p>My Books</p>
-          </li>
-
-          <li class="col-4 d-none d-xl-block px-5">
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-centered-header.png"
-                alt="getinspiredImg"
-                class="w-100"
-              />
-            </a>
-          </li>
-
-          <li class="col-3 col-xl-2 ps-0 ps-xl-5">
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/header-img-3.png"
-                alt="getinspiredImg"
-                class=""
-              />
-            </a>
-            <p>Travel Guides</p>
-          </li>
-
-          <li class="col-3 col-xl-2">
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/header-img-4.png"
-                alt="getinspiredImg"
-                class=""
-              />
-            </a>
-            <p>About Me</p>
-          </li>
-        </ul>
+    <main>
+      <div class="shop-banner text-center">
+        <h1 class="title text-uppercase">cart</h1>
       </div>
+      <div class="container shopping-cart">
+        <table class="w-100 d-none d-xl-table shopping-cart__list" id="listCart">
+          <tr class="">
+            <th class="title-2 pb-5">REMOVE ITEM</th>
+            <th class="title-2 pb-5">PRODUCT</th>
+            <th class="title-2 pb-5">PRICE</th>
+            <th class="title-2 pb-5">QUANTITY</th>
+            <th class="title-2 pb-5">SUBTOTAL</th>
+          </tr>
+        </table>
 
-      <div class="main-blog row">
-        <div class="col-lg-9 col-12 text-center">
-          <div class="main-blog__item" id="mainBlog">
-            <div class="main-blog__thumbnail">
+        <template id="templateCartItem">
+          <tr class="shopping-cart__item">
+            <td class="text-content pb-4">
+              <button data-id="removeCart">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </td>
+            <td class="text-content pb-4">
               <a href="#">
-                <img src="" alt="indiaImage" class="w-100" data-id="thumbnail" />
+                <img src="" alt="" data-id="thumbnail" />
+                <span class="text-capitalize" data-id="name"></span>
               </a>
-              <p class="text-content main-blog__time">September 12, 2018</p>
-            </div>
-            <a class="main-blog__national" href="#">
-              <h1 data-id="national" class="text-capitalize"></h1>
-            </a>
-            <a href="#" class="">
-              <h1 class="main-blog__title title my-2" data-id="name"></h1>
-            </a>
+            </td>
+            <td class="text-content pb-4 text-center">$<span data-id="price"></span></td>
+            <td class="text-content pb-4">
+              <input type="number" value="" class="" min="1" data-id="numbOfPro" />
+            </td>
+            <td class="text-content pb-4">$<span></span></td>
+          </tr>
+        </template>
+
+        <h1 class="title-2 my-5">CART TOTALS</h1>
+        <span class="fw-bolder text-content">Total</span>
+        <span class="shopping-cart__total text-content">$30.00</span>
+        <div class="mt-4 line"></div>
+        <button class="mt-5 text-uppercase shopping-cart__checkout">proceed to checkout</button>
+
+        <!-- <ul class="d-block d-xl-none shopping-cart__list">
+          <li class="d-flex shopping-cart__item">
+            <button>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
             <a href="#">
-              <h1 class="main-blog__tag text-content text-capitalize" data-id="tag"></h1>
+              <img
+                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc4.png"
+                alt=""
+              />
+              <span> France in 6 Days</span>
             </a>
-            <p class="text-content my-3 main-blog__description" data-id="description"></p>
-            <a href="#" class="text-uppercase text-content main-blog__keep" data-id="keepReading"
-              >keep reading...</a
-            >
-            <ul class="d-flex mt-4 justify-content-center main-blog__icons">
-              <li>
-                <a href="https://www.facebook.com/" class="facebook">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/" class="me-4 ms-4" class="twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.pinterest.com/" class="pinterest">
-                  <i class="fa-brands fa-pinterest"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <ul class="blog-list row" id="blogList"></ul>
-
-          <template id="templateBlog">
-            <li class="col-12 col-xl-4 mb-4">
-              <div class="blog-item">
-                <a href="#" data-id="blogLink">
-                  <div class="blog-item__img">
-                    <img src="" alt="blog-image" class="w-100" data-id="thumbnail" />
-                  </div>
-                  <p class="blog-item__national mt-2" data-id="national"></p>
-                  <h1 class="blog-item__title title mt-3 mb-2" data-id="name"></h1>
-                </a>
-                <a
-                  href="#"
-                  class="text-content text-uppercase blog-item__tag mb-4"
-                  data-id="tag"
-                ></a>
-              </div>
-            </li>
-          </template>
-        </div>
-
-        <aside class="col-lg-3 d-none d-xl-block side-bar">
-          <ul id="sideBarList"></ul>
-
-          <template id="templateSidebar">
-            <li class="">
-              <a href="#" class="title" data-id="name">46 AMAZING TRAVEL PICTURES</a>
-              <a href="#" class="mt-1 mb-3 text-content side-bar__tag" data-id="tag">VACATION</a>
-              <div class="" data-id="line"></div>
-            </li>
-          </template>
-        </aside>
+          </li>
+        </ul> -->
       </div>
     </main>
 
@@ -451,6 +390,6 @@
     ></script>
 
     <!-- Scripts should be placed here to prevent blocking render UI -->
-    <script type="module" src="../js/blog/blog.js"></script>
+    <script type="module" src="../js/shop/cart.js"></script>
   </body>
 </html>

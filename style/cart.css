@@ -1,0 +1,32 @@
+.shopping-cart__item a {
+  color: var(--text-color);
+}
+
+.shopping-cart__item button {
+  padding: 4px 8px;
+  border: none;
+}
+
+.shopping-cart__item img {
+  width: 100px;
+  height: 100px;
+}
+
+.shopping-cart__item input {
+  width: 160px;
+  padding: 8px;
+}
+
+.shopping-cart h1 {
+  font-size: 1.5rem;
+}
+
+.shopping-cart__total {
+  margin-left: 14rem;
+}
+
+.shopping-cart__checkout {
+  background-color: #000;
+  color: #fff;
+  padding: 16px;
+}

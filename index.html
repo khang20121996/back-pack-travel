@@ -356,57 +356,17 @@
             </div>
           </div>
 
-          <div class="col-12 col-xl-8 row blog__list">
-            <div class="col-12 col-md-6 mb-4">
-              <a href="#">
+          <ul class="col-12 col-xl-8 row blog__list" id="blogList"></ul>
+          <template id="templateBlog">
+            <li class="col-12 col-md-6 mb-4">
+              <a href="#" data-id="linkPage">
                 <div class="mb-3 blog__list-img">
-                  <img
-                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/h5-post-5.jpg"
-                    alt="blog-image"
-                    class="w-100"
-                  />
+                  <img src="" alt="blog-image" class="w-100" data-id="thumbnail" />
                 </div>
-
-                <h1 class="mb-3 title-2 text-uppercase">a WEEKEND GUIDE TO AUSTRIA</h1>
+                <h1 class="mb-3 title-2 text-uppercase" data-id="name"></h1>
               </a>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-              <a href="#">
-                <div class="mb-3 blog__list-img">
-                  <img
-                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/single-post-7.jpg"
-                    alt="blog-image"
-                    class="w-100"
-                  />
-                </div>
-                <h1 class="mb-3 title-2 text-uppercase">THE TOP CLIMBING TOURS</h1>
-              </a>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-              <a href="#">
-                <div class="mb-3 blog__list-img">
-                  <img
-                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/h5-post-4.jpg"
-                    alt="blog-image"
-                    class="w-100"
-                  />
-                </div>
-                <h1 class="mb-3 title-2 text-uppercase">THE COMPLETE TRAVEL GUIDE 😍</h1>
-              </a>
-            </div>
-            <div class="col-12 col-md-6 mb-4">
-              <a href="#">
-                <div class="mb-3 blog__list-img">
-                  <img
-                    src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/blog-post-h2-4.jpg"
-                    alt="blog-image"
-                    class="w-100"
-                  />
-                </div>
-                <h1 class="mb-3 title-2 text-uppercase">A GUIDE TO BEST MARKETS</h1>
-              </a>
-            </div>
-          </div>
+            </li>
+          </template>
         </div>
       </section>
 

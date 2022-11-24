@@ -1,6 +1,7 @@
 import { shopApi } from '../api/backPackTravelApi';
 import { setImage, setTextContent, setRating } from '../utils/common';
 import debounce from 'lodash.debounce';
+import { handleNavShopMenu } from '../utils/navmenu-shop';
 
 function createProductElement(product) {
   // get template product element and clone
@@ -175,5 +176,6 @@ function initSortingProduct(productList) {
 
     renderProducts(productList);
     initSortingProduct(productList);
+    handleNavShopMenu();
   } catch (error) {}
 })();

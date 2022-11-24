@@ -38,7 +38,7 @@
     <header class="">
       <nav class="navbar fixed-top navbar-light bg-light py-0 px-0">
         <div class="d-flex container" id="navbar-custom-markup">
-          <a href="https://google.com" class="navbar-brand p-2" id="navbar-hlink-markup">
+          <a href="#" class="navbar-brand p-2 home__page" id="navbar-hlink-markup">
             <img
               src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/09/logo-bottom-1.png"
               alt="Logo-backpack-travel"
@@ -51,8 +51,8 @@
           >
             <li class="nav-item me-3 px-1">
               <a
-                href="index.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase home__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -74,8 +74,8 @@
 
             <li class="nav-item me-3 px-1">
               <a
-                href="blog/blog.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase blog__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -85,8 +85,8 @@
 
             <li class="nav-item me-3 px-1">
               <a
-                href="shop/shop.html"
-                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase active"
+                href="#"
+                class="nav-link px-1 py-1 navbar-bold-markup text-uppercase active shop__page"
                 alt="Link to Cassie Gazette Page"
                 title="Link to Cassie Gazette Page"
                 aria-label="Link to Cassie Gazette Page"
@@ -120,6 +120,13 @@
               <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li class="ms-3">
+              <a href="#" class="cart-icon view__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-amount"></span>
+              </a>
+            </li>
+
+            <li class="ms-3">
               <input type="text" placeholder="Search..." />
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
@@ -141,8 +148,8 @@
             <ul class="navbar-na nav__menu d-xl-none" id="navbar-media-markup">
               <li class="nav-item mb-2">
                 <a
-                  href="index.html"
-                  class="nav-link py-1 navbar-bold-markup text-uppercase"
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase active home__page"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
                   aria-label="Link to Cassie Gazette Page"
@@ -164,7 +171,7 @@
 
               <li class="nav-item mb-2">
                 <a
-                  href="blog/blog.html"
+                  href=""
                   class="nav-link py-1 navbar-bold-markup text-uppercase"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
@@ -175,8 +182,8 @@
 
               <li class="nav-item mb-2">
                 <a
-                  href="shop/shop.html"
-                  class="nav-link py-1 navbar-bold-markup text-uppercase active"
+                  href="#"
+                  class="nav-link py-1 navbar-bold-markup text-uppercase shop__page"
                   alt="Link to Cassie Gazette Page"
                   title="Link to Cassie Gazette Page"
                   aria-label="Link to Cassie Gazette Page"
@@ -210,6 +217,12 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
               </li>
               <li class="ms-3">
+                <a href="#" class="cart-icon view__cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="cart-amount"></span>
+                </a>
+              </li>
+              <li class="ms-3">
                 <input type="text" placeholder="Search..." />
                 <i class="fa-solid fa-magnifying-glass"></i>
               </li>
@@ -227,6 +240,15 @@
 
       <div class="container">
         <div class="row product-detail" id="product">
+          <div id="addedToCart">
+            <div class="added-to-cart d-flex mb-5 justify-content-around">
+              <p class="text-content">
+                "<span>France in 6 Days</span>" has been added to your cart.
+              </p>
+              <a href="#" class="view__cart">VIEW CART</a>
+            </div>
+          </div>
+
           <div class="col-12 col-xl-4">
             <img src="" alt="produc-image" class="w-100" data-id="image" />
           </div>
@@ -238,9 +260,9 @@
             <p class="fst-italic text-content mb-4">Buy for $<span data-id="price"></span>.00</p>
             <p class="product-detail__desc text-content mb-5" data-id="description">asdasdsa</p>
 
-            <form class="product-detail__form" action="">
-              <input type="number" value="1" class="" min="1" />
-              <button class="text-uppercase">add to cart</button>
+            <form class="product-detail__form" action="" id="formAddToCart">
+              <input type="number" value="1" class="" min="1" data-id="numbOfPro" />
+              <button type="submit" class="text-uppercase">add to cart</button>
             </form>
 
             <p class="product-detail__desc text-content">Category: <span>Book</span></p>

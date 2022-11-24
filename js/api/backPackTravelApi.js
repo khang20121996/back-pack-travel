@@ -28,3 +28,32 @@ export const shopApi = {
     return axiosClient.patch(url, data);
   },
 };
+
+export const blogApi = {
+  getAll(params) {
+    const url = '/blog';
+    return axiosClient.get(url, { params });
+  },
+
+  getById(id) {
+    const url = `/blog/${id}`;
+    return axiosClient.get(url);
+  },
+};
+
+export const cartApi = {
+  getAll(params) {
+    const url = '/cart';
+    return axiosClient.get(url, { params });
+  },
+
+  getById(id) {
+    const url = `/cart/${id}`;
+    return axiosClient.get(url);
+  },
+
+  add(data) {
+    const url = '/cart';
+    return axiosClient.post(url, data);
+  },
+};
