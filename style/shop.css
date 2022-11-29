@@ -1,3 +1,23 @@
+/* Cart icon */
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon .cart-amount {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  line-height: 12px;
+  font-size: 0.6rem;
+}
+
 /* Banner */
 .shop-banner {
   background-image: url('https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/shop-parallax-1.jpg');

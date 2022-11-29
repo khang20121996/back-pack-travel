@@ -16,25 +16,6 @@
   letter-spacing: 2px;
 }
 
-.cart-icon {
-  position: relative;
-}
-
-.cart-icon .cart-amount {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  line-height: 12px;
-  font-size: 0.6rem;
-}
-
 /* Product detail */
 .product-detail__name {
   font-size: 1.6rem;

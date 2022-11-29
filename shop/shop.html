@@ -47,7 +47,9 @@
           <h1 class="product-item__name title-2 text-uppercase mt-3 mb-2" data-id="name"></h1>
           <div class="fst-italic product-item__hover">Buy for $<span data-id="price"></span></div>
         </a>
-        <a href="#"><p class="text-content product-item__addtocart">Add to cart</p></a>
+        <!-- <a href="#"
+          ><p class="text-content product-item__addtocart" data-id="addToCart">Add to cart</p></a
+        > -->
       </li>
     </template>
 
@@ -135,6 +137,12 @@
             </li>
             <li class="ms-3">
               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li class="ms-3">
+              <a href="#" class="cart-icon view__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-amount"></span>
+              </a>
             </li>
             <li class="ms-3">
               <input type="text" placeholder="Search..." />

@@ -14,8 +14,8 @@ function renderProduct(product) {
   setTextContent(productElement, '[data-id="name"]', product.name);
   setTextContent(productElement, '[data-id="price"]', product.price);
   setTextContent(productElement, '[data-id="description"]', product.description);
-  const tabContentElement = document.getElementById('myTabContent');
 
+  const tabContentElement = document.getElementById('myTabContent');
   setTextContent(tabContentElement, '[data-id="description"]', product.description);
   setTextContent(tabContentElement, '[data-id="weight"]', product.additionalInfor[0].weight);
   setTextContent(
@@ -30,6 +30,7 @@ function renderProduct(product) {
     product.review.length
   );
 
+  console.log(product.name);
   // handle review element
   initShopReviews(product);
 }
@@ -78,14 +79,23 @@ function getCartValues(product, formElement) {
   cartValues.image = product.image;
   cartValues.name = product.name;
   cartValues.price = product.price;
-  cartValues.id = product.id;
+  cartValues.id = Math.floor(Math.random() * Date.now());
+  cartValues.prodId = product.id;
 
   return cartValues;
 }
 
-function handleAddToCart(numbOfPro) {
+function pendingAddToCart(formElement, content) {
+  const addedToCartButton = formElement.querySelector('[data-id="addToCartBtn"]');
+  if (addedToCartButton) {
+    addedToCartButton.textContent = content;
+  }
+}
+
+function handleSuccessAddToCart(numbOfPro, product) {
   const addedToCartElement = document.getElementById('addedToCart');
   if (addedToCartElement) {
+    setTextContent(addedToCartElement, '[data-id="nameCart"]', product.name);
     addedToCartElement.style.display = 'block';
   }
 
@@ -117,14 +127,20 @@ function initAddToCart(product, formId) {
 
   // attach event for add to cart button
 
-  formElement.addEventListener('submit', async (e) => {
+  formElement.addEventListener('submit', (e) => {
     e.preventDefault();
 
     try {
       const cartValues = getCartValues(product, formElement);
       const data = JSON.stringify(cartValues);
-      await cartApi.add(data);
-      handleAddToCart(cartValues.amount);
+      pendingAddToCart(formElement, 'adding to cart...');
+
+      setTimeout(async () => {
+        await cartApi.add(data);
+
+        handleSuccessAddToCart(cartValues.amount, product);
+        pendingAddToCart(formElement, 'add to cart');
+      }, 1000);
     } catch (error) {
       console.log('error adding product to cart');
     }
@@ -133,11 +149,11 @@ function initAddToCart(product, formId) {
   handleViewCart();
 }
 
-async function renderNumOfProIcon(numbOfProd) {
+export function renderNumbOfProdIcon(cartList) {
   const cartAmountElementList = document.querySelectorAll('.cart-amount');
   if (cartAmountElementList) {
     [...cartAmountElementList].forEach((cartAmountElement) => {
-      cartAmountElement.textContent = numbOfProd.length;
+      cartAmountElement.textContent = cartList.length;
     });
   }
 }
@@ -162,8 +178,8 @@ async function renderNumOfProIcon(numbOfProd) {
     }
     renderRelatedProduct(relatedProdList);
 
-    const numbOfProd = await cartApi.getAll();
-    renderNumOfProIcon(numbOfProd);
+    const cartList = await cartApi.getAll();
+    renderNumbOfProdIcon(cartList);
     initAddToCart(product, 'formAddToCart');
     handleNavShopMenu();
   } catch (error) {}

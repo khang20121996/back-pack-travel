@@ -19,11 +19,6 @@ function createProductElement(product) {
   //  attach event click for li element
   const productItemElement = liElement.querySelector('[data-id="productItem"]');
   if (productItemElement) {
-    // const debounceSearch = debounce(
-    //   () => window.open(`../shop/product-detail.html?id=${product.id}`, '_blank'),
-    //   500
-    // );
-    // productItemElement.addEventListener('click', debounceSearch);
     productItemElement.addEventListener('mousedown', () => {
       productItemElement.href = `../shop/product-detail.html?id=${product.id}`;
     });

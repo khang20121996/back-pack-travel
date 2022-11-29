@@ -153,15 +153,15 @@ async function renderRelatedArticles(queryparams) {
 (() => {
   // get query search params
   const url = new URL(window.location);
-  const queryparams = url.searchParams.get('id');
+  const queryparams = Number.parseFloat(url.searchParams.get('id'));
 
   //   render to UI
-  renderBanner(Number.parseFloat(queryparams));
+  renderBanner(queryparams);
   renderThingsToSee(queryparams);
   renderTypicalCosts(queryparams);
   renderBudgetTips(queryparams);
   renderRelatedArticles(queryparams);
-  initPostComments(Number.parseFloat(queryparams));
+  initPostComments(queryparams);
 
   // attach event pagination (next/previous)
   const paginationElement = document.getElementById('contentFooterPagination');

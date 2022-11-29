@@ -56,4 +56,9 @@ export const cartApi = {
     const url = '/cart';
     return axiosClient.post(url, data);
   },
+
+  remove(id) {
+    const url = `/cart/${id}`;
+    return axiosClient.delete(url);
+  },
 };

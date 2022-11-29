@@ -120,12 +120,6 @@
             <li class="ms-3">
               <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </li>
-            <li class="ms-3">
-              <a href="#" class="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-amount">0</span>
-              </a>
-            </li>
 
             <li class="ms-3">
               <input type="text" placeholder="Search..." />
@@ -218,12 +212,6 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
               </li>
               <li class="ms-3">
-                <a href="#" class="cart-icon">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <span class="cart-amount">0</span>
-                </a>
-              </li>
-              <li class="ms-3">
                 <input type="text" placeholder="Search..." />
                 <i class="fa-solid fa-magnifying-glass"></i>
               </li>
@@ -239,7 +227,7 @@
         <h1 class="title text-uppercase">cart</h1>
       </div>
       <div class="container shopping-cart">
-        <table class="w-100 d-none d-xl-table shopping-cart__list" id="listCart">
+        <table class="w-100 d-xl-table shopping-cart__list" id="listCart">
           <tr class="">
             <th class="title-2 pb-5">REMOVE ITEM</th>
             <th class="title-2 pb-5">PRODUCT</th>
@@ -250,46 +238,31 @@
         </table>
 
         <template id="templateCartItem">
-          <tr class="shopping-cart__item">
+          <tr class="shopping-cart__item" data-id="cartItem">
             <td class="text-content pb-4">
               <button data-id="removeCart">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </td>
             <td class="text-content pb-4">
-              <a href="#">
+              <a href="#" data-id="prodDatailLink">
                 <img src="" alt="" data-id="thumbnail" />
                 <span class="text-capitalize" data-id="name"></span>
               </a>
             </td>
-            <td class="text-content pb-4 text-center">$<span data-id="price"></span></td>
+            <td class="text-content pb-4">$<span data-id="price"></span>.00</td>
             <td class="text-content pb-4">
-              <input type="number" value="" class="" min="1" data-id="numbOfPro" />
+              <input type="number" value="" class="" min="1" data-id="numbOfPro" step="1" />
             </td>
-            <td class="text-content pb-4">$<span></span></td>
+            <td class="text-content pb-4">$<span data-id="subTotal"></span>.00</td>
           </tr>
         </template>
 
         <h1 class="title-2 my-5">CART TOTALS</h1>
         <span class="fw-bolder text-content">Total</span>
-        <span class="shopping-cart__total text-content">$30.00</span>
+        <span class="shopping-cart__total text-content">$ <span id="totalCost"></span>.00</span>
         <div class="mt-4 line"></div>
         <button class="mt-5 text-uppercase shopping-cart__checkout">proceed to checkout</button>
-
-        <!-- <ul class="d-block d-xl-none shopping-cart__list">
-          <li class="d-flex shopping-cart__item">
-            <button>
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <a href="#">
-              <img
-                src="https://backpacktraveler.qodeinteractive.com/wp-content/uploads/2018/08/produc4.png"
-                alt=""
-              />
-              <span> France in 6 Days</span>
-            </a>
-          </li>
-        </ul> -->
       </div>
     </main>
 
